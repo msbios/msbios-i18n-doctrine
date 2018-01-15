@@ -54,7 +54,7 @@ class EntityTranslationAwareTrait
      */
     public function addTranslation(ObjectTranslationInterface $translation)
     {
-        if (!$this->translations->contains($translation)) {
+        if (! $this->translations->contains($translation)) {
             $this->translations[] = $translation;
             $translation->setObject($this);
         }
