@@ -6,19 +6,19 @@
 
 namespace MSBios\I18n\Doctrine;
 
-use MSBios\Session\Initializer\ContainerInitializer;
-use MSBios\Session\Initializer\SessionManagerInitializer;
-use Zend\ServiceManager\Factory\InvokableFactory;
-
 return [
 
-    'controllers' => [
-        'factories' => [
+    'doctrine' => [
+        'connection' => [
+            'orm_default' => [
+                'params' => [
+                    'host' => '127.0.0.1',
+                    'user' => 'root',
+                    'password' => 'root',
+                    'dbname' => 'portal.dev',
+                ],
+            ],
         ],
-        'aliases' => [
-        ],
-        'initializers' => [
-        ]
     ],
 
     'view_manager' => [

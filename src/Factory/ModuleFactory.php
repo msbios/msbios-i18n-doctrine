@@ -4,19 +4,18 @@
  * @author Judzhin Miles <info[woof-woof]msbios.com>
  */
 
-namespace MSBios\MongoDB\Factory;
+namespace MSBios\I18n\Doctrine\Factory;
 
 use Interop\Container\ContainerInterface;
-use MSBios\MongoDB\Module;
+use MSBios\I18n\Doctrine\Module;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
  * Class ModuleFactory
- * @package MSBios\MongoDB\Factory
+ * @package MSBios\I18n\Doctrine\Factory
  */
 class ModuleFactory implements FactoryInterface
 {
-
     /**
      * @param ContainerInterface $container
      * @param string $requestedName

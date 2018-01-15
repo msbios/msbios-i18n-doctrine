@@ -8,6 +8,23 @@
 return [
     // Retrieve list of modules used in this application.
     'modules' => [
+        'MSBios\Portal\Doctrine',
+        'MSBios\Portal',
+        'MSBios\CPanel\Doctrine',
+        'MSBios\CPanel',
+        'MSBios\Guard\CPanel',
+        'MSBios\Guard\CPanel\Doctrine',
+        'MSBios\Authentication\Doctrine',
+        'MSBios\Guard\Resource\Doctrine',
+        'MSBios\Form\Doctrine',
+        'MSBios\Doctrine',
+        'Zend\Cache',
+        'MSBios\Guard\Resource',
+        'MSBios\Authentication',
+        'MSBios\Guard',
+        'MSBios\Db',
+        'Zend\Db',
+        'MSBios\Form',
         'MSBios\Application',
         'Zend\Mvc\Plugin\FilePrg',
         'Zend\Form',
@@ -27,6 +44,8 @@ return [
         'MSBios\Assetic',
         'MSBios\I18n',
         'ZendDeveloperTools',
+        'DoctrineModule',
+        'DoctrineORMModule',
     ],
 
     'module_listener_options' => [

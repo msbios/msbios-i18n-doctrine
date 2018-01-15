@@ -26,9 +26,9 @@
   "require": {
   },
   "require-dev": {
+    "msbios/portal-doctrine": "^1.0",
     "msbios/test": "^1.0",
-    "msbios/debug": "^1.0",
-    "msbios/application": "^1.0"
+    "msbios/debug": "^1.0"
   },
   "scripts": {
     "cs-check": "phpcs",
