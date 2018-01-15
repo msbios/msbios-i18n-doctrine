@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1515593191">
+  <project timestamp="1515593191">
+    <package name="MSBios\MongoDB\Factory">
+      <file name="/Users/judzhin/Projects/_modules/msbios-mongodb/src/Factory/ModuleFactory.php">
+        <class name="ModuleFactory" namespace="MSBios\MongoDB\Factory" fullPackage="MSBios" package="MSBios">
+          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+        </class>
+        <line num="26" type="method" name="__invoke" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <metrics loc="30" ncloc="16" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="MSBios\MongoDB">
+      <file name="/Users/judzhin/Projects/_modules/msbios-mongodb/src/Module.php">
+        <class name="Module" namespace="MSBios\MongoDB" fullPackage="MSBios" package="MSBios">
+          <metrics complexity="2" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="2" elements="5" coveredelements="3"/>
+        </class>
+        <line num="35" type="method" name="getConfig" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="45" type="method" name="getAutoloaderConfig" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="48" type="stmt" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <metrics loc="55" ncloc="37" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="2" elements="5" coveredelements="3"/>
+      </file>
+    </package>
+    <metrics files="2" loc="85" ncloc="53" classes="2" methods="3" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="2" elements="9" coveredelements="3"/>
+  </project>
+</coverage>
