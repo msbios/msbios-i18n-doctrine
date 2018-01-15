@@ -10,12 +10,14 @@ use Gedmo\Translatable\Entity\MappedSuperclass\AbstractPersonalTranslation;
 /**
  * Class ObjectTranslation
  * @package MSBios\I18n\Doctrine\Entity
+ *
  * @ORM\MappedSuperclass
  */
-abstract class ObjectTranslation extends AbstractPersonalTranslation implements ObjectTranslationInterface
+class ObjectTranslation extends AbstractPersonalTranslation implements ObjectTranslationInterface
 {
     /**
      * ObjectTranslation constructor.
+     *
      * @param $locale
      * @param $field
      * @param $content
