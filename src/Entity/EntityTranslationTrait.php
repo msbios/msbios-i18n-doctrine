@@ -11,10 +11,10 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Trait EntityTranslationAwareTrait
+ * Trait EntityTranslationTrait
  * @package MSBios\I18n\Doctrine\Entity
  */
-trait EntityTranslationAwareTrait
+trait EntityTranslationTrait
 {
     /**
      * @var ArrayCollection
