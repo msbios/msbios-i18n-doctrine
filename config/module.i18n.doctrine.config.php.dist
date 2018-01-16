@@ -3,37 +3,10 @@
  * @access protected
  * @author Judzhin Miles <info[woof-woof]msbios.com>
  */
-namespace MSBios\MongoDB;
+namespace MSBios\I18n\Doctrine;
 
 return [
-
     Module::class => [
-
-        \MongoDB\Client::class => [
-            /**
-             *
-             * Expects: string
-             * Default: mongodb://127.0.0.1/
-             */
-            'uri' => 'mongodb://127.0.0.1/',
-
-            /**
-             *
-             * Expects: array
-             * Default: []
-             */
-            'uriOptions' => [
-                //...
-            ],
-
-            /**
-             *
-             * Expects: array
-             * Default: []
-             */
-            'driverOptions' => [
-                //...
-            ]
-        ]
+        // ...
     ]
 ];

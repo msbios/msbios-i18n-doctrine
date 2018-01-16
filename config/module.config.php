@@ -68,7 +68,7 @@ return [
                 'listener' => Listener\RouteListener::class,
                 'method' => 'onRoute',
                 'event' => \Zend\Mvc\MvcEvent::EVENT_ROUTE,
-                'priority' => 1,
+                'priority' => -100,
             ]
         ]
     ],
