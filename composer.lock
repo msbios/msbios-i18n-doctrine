@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3b2a452fdffbb2c9c6f520e600d58ffd",
+    "content-hash": "9f6119d3ed7af7d296186ef6d9631798",
     "packages": [],
     "packages-dev": [
         {
@@ -53,16 +53,16 @@
         },
         {
             "name": "codedungeon/phpunit-result-printer",
-            "version": "0.5.1",
+            "version": "0.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mikeerickson/phpunit-pretty-result-printer.git",
-                "reference": "2dcf5f220f1019ddb2a85995828f513205416e0d"
+                "reference": "f20153a255dcf444a8abe4ac3051aa35ef865b90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mikeerickson/phpunit-pretty-result-printer/zipball/2dcf5f220f1019ddb2a85995828f513205416e0d",
-                "reference": "2dcf5f220f1019ddb2a85995828f513205416e0d",
+                "url": "https://api.github.com/repos/mikeerickson/phpunit-pretty-result-printer/zipball/f20153a255dcf444a8abe4ac3051aa35ef865b90",
+                "reference": "f20153a255dcf444a8abe4ac3051aa35ef865b90",
                 "shasum": ""
             },
             "require": {
@@ -97,7 +97,7 @@
                 "printer",
                 "result-printer"
             ],
-            "time": "2018-01-09T21:42:36+00:00"
+            "time": "2018-01-11T17:18:07+00:00"
         },
         {
             "name": "container-interop/container-interop",
@@ -1436,66 +1436,6 @@
             "time": "2017-10-06T16:20:43+00:00"
         },
         {
-            "name": "mongodb/mongodb",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mongodb/mongo-php-library.git",
-                "reference": "5cffeb33b893b6bb04195b99ddc3955a29252339"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/5cffeb33b893b6bb04195b99ddc3955a29252339",
-                "reference": "5cffeb33b893b6bb04195b99ddc3955a29252339",
-                "shasum": ""
-            },
-            "require": {
-                "ext-hash": "*",
-                "ext-json": "*",
-                "ext-mongodb": "^1.3.0",
-                "php": ">=5.5"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "MongoDB\\": "src/"
-                },
-                "files": [
-                    "src/functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Jeremy Mikola",
-                    "email": "jmikola@gmail.com"
-                },
-                {
-                    "name": "Hannes Magnusson",
-                    "email": "bjori@mongodb.com"
-                },
-                {
-                    "name": "Derick Rethans",
-                    "email": "github@derickrethans.nl"
-                }
-            ],
-            "description": "MongoDB driver library",
-            "homepage": "https://jira.mongodb.org/browse/PHPLIB",
-            "keywords": [
-                "database",
-                "driver",
-                "mongodb",
-                "persistence"
-            ],
-            "time": "2017-10-27T19:42:57+00:00"
-        },
-        {
             "name": "monolog/monolog",
             "version": "1.23.0",
             "source": {
@@ -2410,16 +2350,16 @@
         },
         {
             "name": "msbios/i18n",
-            "version": "v1.0.6",
+            "version": "v1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-i18n.git",
-                "reference": "2cdc54dfe860eb549709dd99e0abf145432d2bdc"
+                "reference": "c8b09db9e6d567585c8cc42492c4ad97048bcd76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-i18n/zipball/2cdc54dfe860eb549709dd99e0abf145432d2bdc",
-                "reference": "2cdc54dfe860eb549709dd99e0abf145432d2bdc",
+                "url": "https://api.github.com/repos/msbios/msbios-i18n/zipball/c8b09db9e6d567585c8cc42492c4ad97048bcd76",
+                "reference": "c8b09db9e6d567585c8cc42492c4ad97048bcd76",
                 "shasum": ""
             },
             "require": {
@@ -2470,7 +2410,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2018-01-03T19:04:29+00:00"
+            "time": "2018-01-16T08:56:53+00:00"
         },
         {
             "name": "msbios/json",
