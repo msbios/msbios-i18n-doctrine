@@ -5,6 +5,8 @@
  */
 namespace MSBios\I18n\Doctrine;
 
+use Zend\ServiceManager\Factory\InvokableFactory;
+
 return [
 
     'doctrine' => [
@@ -54,6 +56,9 @@ return [
         'factories' => [
             Module::class =>
                 Factory\ModuleFactory::class,
+
+            Listener\RouteListener::class =>
+                InvokableFactory::class
         ]
     ],
 
