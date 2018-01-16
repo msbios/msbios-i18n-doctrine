@@ -7,9 +7,14 @@
 namespace MSBios\I18n\Doctrine;
 
 use MSBios\ModuleInterface;
+use Zend\EventManager\EventInterface;
+use Zend\EventManager\LazyListenerAggregate;
 use Zend\Loader\AutoloaderFactory;
 use Zend\Loader\StandardAutoloader;
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
+use Zend\ModuleManager\Feature\BootstrapListenerInterface;
+use Zend\Mvc\ApplicationInterface;
+use Zend\ServiceManager\ServiceLocatorInterface;
 
 /**
  * Class Module
@@ -17,10 +22,11 @@ use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
  */
 class Module implements
     ModuleInterface,
-    AutoloaderProviderInterface
+    AutoloaderProviderInterface,
+    BootstrapListenerInterface
 {
     /** @const VERSION */
-    const VERSION = '1.0.2';
+    const VERSION = '1.0.3';
 
     /**
      * @return mixed
@@ -44,5 +50,25 @@ class Module implements
                 ],
             ],
         ];
+    }
+
+    /**
+     * Listen to the bootstrap event
+     *
+     * @param EventInterface $e
+     * @return array
+     */
+    public function onBootstrap(EventInterface $e)
+    {
+        /** @var ApplicationInterface $target */
+        $target = $e->getTarget();
+
+        /** @var ServiceLocatorInterface $serviceManager */
+        $serviceManager = $target->getServiceManager();
+
+        (new LazyListenerAggregate(
+            $serviceManager->get(self::class)['listeners'],
+            $serviceManager
+        ))->attach($target->getEventManager());
     }
 }

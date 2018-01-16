@@ -58,6 +58,13 @@ return [
     ],
 
     Module::class => [
-
+        'listeners' => [
+            Listener\RouteListener::class => [ // MSBios\I18n\Doctrine\Listener\RouteListener::class
+                'listener' => Listener\RouteListener::class,
+                'method' => 'onRoute',
+                'event' => \Zend\Mvc\MvcEvent::EVENT_ROUTE,
+                'priority' => 1,
+            ]
+        ]
     ],
 ];
