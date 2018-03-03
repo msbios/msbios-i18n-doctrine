@@ -8,6 +8,7 @@
 return [
     // Retrieve list of modules used in this application.
     'modules' => [
+        'MSBios\Guard\Doctrine',
         'MSBios\Portal\Doctrine',
         'MSBios\Portal',
         'MSBios\CPanel\Doctrine',

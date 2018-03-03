@@ -1,7 +1,7 @@
 {
   "name": "msbios/i18n-doctrine",
   "description": "MSBios I18n Doctrine",
-  "license": "GPL",
+  "license": "MIT",
   "keywords": [
     "php"
   ],
@@ -22,8 +22,6 @@
     "psr-4": {
       "MSBiosTest\\I18n\\Doctrine\\": "tests/"
     }
-  },
-  "require": {
   },
   "require-dev": {
     "msbios/portal-doctrine": "^1.0",
