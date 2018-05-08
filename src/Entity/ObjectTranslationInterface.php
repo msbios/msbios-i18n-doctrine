@@ -11,5 +11,5 @@ namespace MSBios\I18n\Doctrine\Entity;
  */
 interface ObjectTranslationInterface
 {
-
+    // ...
 }
