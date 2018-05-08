@@ -8,6 +8,12 @@
 return [
     // Retrieve list of modules used in this application.
     'modules' => [
+        'MSBios\Resource\Doctrine',
+        'Zend\Log',
+        'MSBios\View',
+        'Zend\Session',
+        'Zend\Paginator',
+        'Zend\Validator',
         'MSBios\Guard\Doctrine',
         'MSBios\Portal\Doctrine',
         'MSBios\Portal',
