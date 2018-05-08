@@ -29,6 +29,15 @@ class RouteListener implements TranslatorAwareInterface, ObjectManagerAwareInter
     use ObjectManagerAwareTrait;
 
     /**
+     * RouteListener constructor.
+     * @param $translator
+     */
+    public function __construct($translator)
+    {
+        $this->setTranslator($translator);
+    }
+
+    /**
      * @param EventInterface $e
      * @todo https://docs.zendframework.com/zend-mvc-i18n/routing/
      */
