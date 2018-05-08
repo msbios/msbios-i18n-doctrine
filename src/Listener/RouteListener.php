@@ -23,7 +23,7 @@ use Zend\EventManager\EventInterface;
  * Class RouteListener
  * @package MSBios\I18n\Doctrine\Listener
  */
-class RouteListener implements TranslatorAwareInterface, ObjectManagerAwareInterface
+class RouteListener implements ObjectManagerAwareInterface
 {
     use TranslatorAwareTrait;
     use ObjectManagerAwareTrait;
