@@ -9,13 +9,6 @@ return [
 
     'doctrine' => [
         'driver' => [
-            // default metadata driver, aggregates all other drivers into a single one.
-            // Override `orm_default` only if you know what you're doing
-            'orm_default' => [
-                'drivers' => [
-                    // ...
-                ]
-            ],
             'entity_resolver' => [
                 'orm_default' => [
                     'resolvers' => [
@@ -38,14 +31,19 @@ return [
         ]
     ],
 
+    'listeners' => [
+        ListenerAggregate::class =>
+            ListenerAggregate::class
+    ],
+
     Module::class => [
-        'listeners' => [
-            Listener\RouteListener::class => [ // MSBios\I18n\Doctrine\Listener\RouteListener::class
-                'listener' => Listener\RouteListener::class,
-                'method' => 'onRoute',
-                'event' => \Zend\Mvc\MvcEvent::EVENT_ROUTE,
-                'priority' => -100,
-            ]
-        ]
+        // 'listeners' => [
+        //     Listener\RouteListener::class => [
+        //         'listener' => Listener\RouteListener::class,
+        //         'method' => 'onRoute',
+        //         'event' => \Zend\Mvc\MvcEvent::EVENT_ROUTE,
+        //         'priority' => -100,
+        //     ]
+        // ]
     ],
 ];

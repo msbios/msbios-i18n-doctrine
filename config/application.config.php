@@ -8,6 +8,11 @@
 return [
     // Retrieve list of modules used in this application.
     'modules' => [
+        'MSBios\Cache',
+        'Zend\Serializer',
+        'MSBios\Hydrator',
+        'MSBios\Paginator\Doctrine',
+        'MSBios\Validator',
         'MSBios\Resource\Doctrine',
         'Zend\Log',
         'MSBios\View',

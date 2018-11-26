@@ -22,11 +22,10 @@ use Zend\ServiceManager\ServiceLocatorInterface;
  */
 class Module implements
     ModuleInterface,
-    AutoloaderProviderInterface,
-    BootstrapListenerInterface
+    AutoloaderProviderInterface
 {
     /** @const VERSION */
-    const VERSION = '1.0.10';
+    const VERSION = '1.0.11';
 
     /**
      * @return mixed
@@ -52,23 +51,23 @@ class Module implements
         ];
     }
 
-    /**
-     * Listen to the bootstrap event
-     *
-     * @param EventInterface $e
-     * @return array
-     */
-    public function onBootstrap(EventInterface $e)
-    {
-        /** @var ApplicationInterface $target */
-        $target = $e->getTarget();
-
-        /** @var ServiceLocatorInterface $serviceManager */
-        $serviceManager = $target->getServiceManager();
-
-        (new LazyListenerAggregate(
-            $serviceManager->get(self::class)['listeners'],
-            $serviceManager
-        ))->attach($target->getEventManager());
-    }
+    // /**
+    //  * Listen to the bootstrap event
+    //  *
+    //  * @param EventInterface $e
+    //  * @return array
+    //  */
+    // public function onBootstrap(EventInterface $e)
+    // {
+    //     /** @var ApplicationInterface $target */
+    //     $target = $e->getTarget();
+    //
+    //     /** @var ServiceLocatorInterface $serviceManager */
+    //     $serviceManager = $target->getServiceManager();
+    //
+    //     (new LazyListenerAggregate(
+    //         $serviceManager->get(self::class)['listeners'],
+    //         $serviceManager
+    //     ))->attach($target->getEventManager());
+    // }
 }
