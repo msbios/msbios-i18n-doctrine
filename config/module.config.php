@@ -5,6 +5,8 @@
  */
 namespace MSBios\I18n\Doctrine;
 
+use MSBios\Factory\ModuleFactory;
+
 return [
 
     'doctrine' => [
@@ -23,9 +25,11 @@ return [
     'service_manager' => [
         'factories' => [
             Module::class =>
-                Factory\ModuleFactory::class,
+                ModuleFactory::class,
 
             // listeners
+            ListenerAggregate::class =>
+                Factory\ListenerAggregateFactory::class,
             Listener\RouteListener::class =>
                 Factory\RouteListenerFactory::class
         ]
