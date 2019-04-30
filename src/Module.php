@@ -6,68 +6,32 @@
  */
 namespace MSBios\I18n\Doctrine;
 
-use MSBios\ModuleInterface;
-use Zend\EventManager\EventInterface;
-use Zend\EventManager\LazyListenerAggregate;
-use Zend\Loader\AutoloaderFactory;
-use Zend\Loader\StandardAutoloader;
-use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
-use Zend\ModuleManager\Feature\BootstrapListenerInterface;
-use Zend\Mvc\ApplicationInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
-
 /**
  * Class Module
  * @package MSBios\I18n\Doctrine
  */
-class Module implements
-    ModuleInterface,
-    AutoloaderProviderInterface
+class Module extends \MSBios\Module
 {
     /** @const VERSION */
-    const VERSION = '1.0.12';
+    const VERSION = '1.0.13';
 
     /**
-     * @return mixed
-     */
-    public function getConfig()
-    {
-        return include __DIR__ . '/../config/module.config.php';
-    }
-
-    /**
-     * Return an array for passing to Zend\Loader\AutoloaderFactory.
+     * @inheritdoc
      *
-     * @return array
+     * @return string
      */
-    public function getAutoloaderConfig()
+    protected function getDir()
     {
-        return [
-            AutoloaderFactory::STANDARD_AUTOLOADER => [
-                StandardAutoloader::LOAD_NS => [
-                    __NAMESPACE__ => __DIR__,
-                ],
-            ],
-        ];
+        return __DIR__;
     }
 
-    // /**
-    //  * Listen to the bootstrap event
-    //  *
-    //  * @param EventInterface $e
-    //  * @return array
-    //  */
-    // public function onBootstrap(EventInterface $e)
-    // {
-    //     /** @var ApplicationInterface $target */
-    //     $target = $e->getTarget();
-    //
-    //     /** @var ServiceLocatorInterface $serviceManager */
-    //     $serviceManager = $target->getServiceManager();
-    //
-    //     (new LazyListenerAggregate(
-    //         $serviceManager->get(self::class)['listeners'],
-    //         $serviceManager
-    //     ))->attach($target->getEventManager());
-    // }
+    /**
+     * @inheritdoc
+     *
+     * @return string
+     */
+    protected function getNamespace()
+    {
+        return __NAMESPACE__;
+    }
 }

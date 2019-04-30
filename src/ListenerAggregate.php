@@ -12,12 +12,12 @@ use Doctrine\Common\Cache\ArrayCache;
 use Doctrine\Common\EventSubscriber;
 use Doctrine\Common\Persistence\ObjectManager;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
+use DoctrineModule\Persistence\ProvidesObjectManager;
 use Gedmo\Translatable\TranslatableListener;
-use MSBios\Doctrine\ObjectManagerAwareTrait;
-use MSBios\I18n\TranslatorAwareTrait;
 use Zend\EventManager\AbstractListenerAggregate;
 use Zend\EventManager\EventInterface;
 use Zend\EventManager\EventManagerInterface;
+use Zend\I18n\Translator\TranslatorAwareTrait;
 use Zend\I18n\Translator\TranslatorInterface;
 use Zend\Mvc\MvcEvent;
 
@@ -27,11 +27,12 @@ use Zend\Mvc\MvcEvent;
  */
 class ListenerAggregate extends AbstractListenerAggregate implements ObjectManagerAwareInterface
 {
-    use ObjectManagerAwareTrait;
+    use ProvidesObjectManager;
     use TranslatorAwareTrait;
 
     /**
      * ListenerAggregate constructor.
+     *
      * @param ObjectManager $objectManager
      * @param TranslatorInterface $translator
      */
@@ -48,7 +49,8 @@ class ListenerAggregate extends AbstractListenerAggregate implements ObjectManag
      */
     public function attach(EventManagerInterface $events, $priority = 1)
     {
-        $events->attach(MvcEvent::EVENT_ROUTE, [$this, 'onRoute'], -100);
+        $this->listeners[] = $events
+            ->attach(MvcEvent::EVENT_ROUTE, [$this, 'onRoute'], -100);
     }
 
     /**
