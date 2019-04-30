@@ -3,6 +3,7 @@
  * @access protected
  * @author Judzhin Miles <info[woof-woof]msbios.com>
  */
+
 namespace MSBios\I18n\Doctrine;
 
 use Doctrine\Common\Annotations\AnnotationReader;
@@ -39,11 +40,14 @@ class ListenerAggregate extends AbstractListenerAggregate implements ObjectManag
     public function __construct(ObjectManager $objectManager, TranslatorInterface $translator)
     {
         $this
-            ->setObjectManager($objectManager)
+            ->setObjectManager($objectManager);
+        $this
             ->setTranslator($translator);
     }
 
     /**
+     * @inheritdoc
+     *
      * @param EventManagerInterface $events
      * @param int $priority
      */
